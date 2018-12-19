@@ -1,0 +1,7 @@
+* Ansible examples for Machine Learning
+** DONE Introductory YAML file
+** DONE Introductory ansible.cfg
+** DONE Introductory playbook
+** TODO TensorFlow
+** TODO YoloV2 with NCSDK
+** TODO Hadoop installation
