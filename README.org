@@ -2,6 +2,6 @@
  1. +Introductory YAML file+
  2. +Introductory ansible.cfg+
  3. +Introductory playbook+
- 4. TensorFlow
+ 4. +TensorFlow+
  5. YoloV2 with NCSDK
  6. Hadoop installation
