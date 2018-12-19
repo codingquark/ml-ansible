@@ -1,0 +1,22 @@
+---
+- name: Configure machine for machine learning
+  hosts: mlmachines
+  become: False
+  vars:
+    tensorflow_repo: temp
+  tasks:
+    - name: install git
+      become: True
+      apt: name=git update_cache=yes
+
+    - name: clone a git repo
+      git:
+        repo: https://github.com/tensorflow/tensorflow.git
+        dest: /home/pi/workspace/tensorflow
+        version: master
+        accept_hostkey: yes
+        key_file: /home/codingquark/.ssh/codingquark_git
+
+    - name: install tensorflow with pip
+      pip:
+        name: tensorflow
