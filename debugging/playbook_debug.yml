@@ -1,0 +1,12 @@
+---
+- name: Debugging a playbook
+  hosts: testmachines
+  become: False
+  strategy: debug
+  tasks:
+    - name: Cloning tensorflow
+      git:
+        repo: https://github.com/tensorflow/tensorflow.git
+        dest: /home/codingquark/workspace
+        version: master
+        key_file: /home/codingquark/.ssh/codingquark_git

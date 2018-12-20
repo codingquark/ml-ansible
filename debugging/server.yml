@@ -1,0 +1,11 @@
+---
+- name: Demonstrate debug plugin
+  hosts: testmachines
+  become: False
+  tasks:
+    - name: clone a git repo
+      git:
+        repo: https://github.com/tensorflow/tensorflow.git
+        dest: /home/codingquark/workspace
+        version: master
+        key_file: /home/codingquark/.ssh/codingquark_git

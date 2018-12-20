@@ -1,0 +1,20 @@
+---
+- name: Configure webservers with nginx
+  hosts: webservers
+  become: True # become root
+  vars:
+    conf_file: /etc/nginx/sites-available/default
+    key_file: /etc/nginx/ssl/nginx.key
+  tasks:
+    - name: install nginx # optional, but a must
+      apt: name=nginx update_cache=yes
+
+    - name: capture output of python version
+      command: python --version
+      register: pyversion
+    - debug: msg="Python version is {{ pyversion.stdout  }}"
+    - name: Run a program
+      command: /usr/bin/program
+      register: result
+      ignore_errors: Yes
+    - debug: var=result

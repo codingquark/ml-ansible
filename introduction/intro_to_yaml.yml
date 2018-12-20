@@ -1,0 +1,29 @@
+---
+# This is a comment, and `---` is how you start a document
+
+This is a string
+# JSON eq would be "This is a string"
+
+# Booleans
+True
+true
+Yes
+False
+false
+No
+
+# Lists
+- Item 1
+- Item 2
+- Item 3
+
+# Dictionaries
+name: SciPy
+city: Mumbai
+state: MH
+
+# Multiple lines
+address: >-
+  Department of Computer Science
+  IITB
+city: Mumbai

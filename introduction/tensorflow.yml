@@ -1,5 +1,5 @@
 ---
-- name: Configure machine for machine learning
+- name: Configure machines for machine learning
   hosts: mlmachines
   become: False
   vars:

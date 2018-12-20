@@ -3,12 +3,14 @@
 - name: Configure webservers with nginx
   hosts: webservers
   become: True # become root
+  vars:
+    nginx_cfg_file: /etc/nginx/sites-available/default
   tasks:
     - name: install nginx # optional, but a must
       apt: name=nginx update_cache=yes
 
     - name: copy nginx config file
-      copy: src=files/nginx.cfg dest=/etc/nginx/sites-available/default
+      copy: src=files/nginx.cfg dest={{ nginx_cfg_file }}
 
     - name: enable configuration
       file: >-

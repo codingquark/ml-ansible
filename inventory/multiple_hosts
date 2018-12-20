@@ -1,0 +1,7 @@
+[mlmachines]
+rpi1 ansible_host=192.168.0.24 ansible_port=22 ansible_user=pi ansible_private_key_file=/home/codingquark/.ssh/codingquark_git
+rpi2 ansible_host=foo.example.com ansible_port=22 ansible_user=pi ansible_private_key_file=/home/codingquark/.ssh/codingquark_git
+
+[webservers]
+codingquark.com
+foo.example.com

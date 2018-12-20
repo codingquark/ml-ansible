@@ -1,0 +1,8 @@
+---
+- name: Demonstrating assert module
+  hosts: testmachines
+  become: False
+  tasks:
+    - name: assert that eth1 interface exists
+      assert:
+        that: ansible_eth1 is defined

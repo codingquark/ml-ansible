@@ -1,0 +1,24 @@
+* Raw error output
+TASK [check out the repository on the host] *************************************
+fatal: [web]: FAILED! => {"changed": false, "cmd": "/usr/bin/git clone --origin o
+rigin '' /home/vagrant/mezzanine/mezzanine_example", "failed": true, "msg": "Clon
+ing into '/home/vagrant/mezzanine/mezzanine_example'...\nPermission denied (publi
+ckey).\r\nfatal: Could not read from remote repository.\n\nPlease make sure you h
+ave the correct access rights\nand the repository exists.", "rc": 128, "stderr":
+"Cloning into '/home/vagrant/mezzanine/mezzanine_example'...\nPermission denied (
+publickey).\r\nfatal: Could not read from remote repository.\n\nPlease make sure
+you have the correct access rights\nand the repository exists.\n", "stderr_lines"
+: ["Cloning into '/home/vagrant/mezzanine/mezzanine_example'...", "Permission den
+ied (publickey).", "fatal: Could not read from remote repository.", "", "Please m
+ake sure you have the correct access rights", "and the repository exists."], "std
+out": "", "stdout_lines": []}
+
+* Output with `debug` plugin
+TASK [check out the repository on the host] *************************************
+fatal: [web]: FAILED! => {
+"changed": false,
+"cmd": "/usr/bin/git clone --origin origin '' /home/vagrant/mezzanine/mezzani
+ne_example",
+"failed": true,
+"rc": 128
+}
