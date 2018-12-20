@@ -1,7 +1,61 @@
-* Ansible examples for Machine Learning
+Dependency
+==========
+* [Python 3.x][python]
+* [Vagrant][vagrant]
+* [Virtualbox][virtualbox]
+* [Ansible][ansible]
+
+Pre-requisites
+==============
+
+Below are links pointing to official installation page of tool. Please navigate
+to steps demonstrating installation instructions for desired operating system.
+
+* Download [Virtualbox][virtualbox] from [here][virtualbox_installation].
+
+* Install [Vagrant][vagrant] from [here][vagrant_installation]
+
+* Install [Pipenv][pipenv] for managing python dependencies from
+  [this][pipenv_install] instructions.
+
+
+Build
+======
+
+You should have ran steps mentioned at **Pre-requisites** section before moving
+to this section. Below are steps to activate a Python virtual environment and
+installing all python dependency to it.
+
+```shell
+pipenv install
+```
+
+```shell
+pipenv shell
+```
+
+Run above command every time for activating the virtual environment and running commands from that environment.
+
+
+Ansible examples for Machine Learning
  1. +Introductory YAML file+
  2. +Introductory ansible.cfg+
  3. +Introductory playbook+
  4. +TensorFlow+
- 5. YoloV2 with NCSDK
+ 5. +YoloV2 with NCSDK+
  6. Hadoop installation
+
+Note
+=====
+This project is mostly tested on GNU/Linux environment. Though, we encourage to
+share a feedback with other architectures.
+
+
+[python]: http://python.org
+[vagrant]: http://vagrantup.com
+[virtualbox]: https://www.virtualbox.org
+[ansible]: https://www.ansible.com
+[pipenv]: https://pipenv.readthedocs.io/en/latest/
+[pipenv_install]: https://pipenv.readthedocs.io/en/latest/#install-pipenv-today
+[virtualbox_installation]: https://www.virtualbox.org/wiki/Downloads
+[vagrant_installation]: https://www.vagrantup.com/docs/installation/
